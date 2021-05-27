@@ -1,0 +1,35 @@
+dbdiagrams.io
+
+// Creating tables
+Table users as U {
+  id int [pk, increment] // auto-increment
+  day_id int
+  created_at timestamp
+}
+
+Table day {
+  id int [pk, increment]
+  name varchar
+  module1_id int
+  module2_id int
+  created_at timestamp
+ }
+
+Table module1 {
+  id int [pk, increment]
+  name varchar
+  created_at timestamp
+ }
+ 
+ Table module2 {
+  id int [pk, increment]
+  name varchar
+  created_at timestamp
+ }
+
+// Creating references
+// You can also define relaionship separately
+// > many-to-one; < one-to-many; - one-to-one
+Ref: U.day_id < day.id
+Ref: day.module1_id - module1.id
+Ref: day.module2_id - module2.id

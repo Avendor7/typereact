@@ -1,0 +1,3 @@
+For database everything is stored by user for each day. Then there could be extra tables for each 'module' thereafter. 
+
+See dbdiagrams.txt
