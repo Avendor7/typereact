@@ -1,14 +1,14 @@
 import React from 'react';
 import './../styles/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Nav from './Nav';
+import MyNav from './MyNav';
 import Sidebar from './Sidebar';
 
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
+      <MyNav/>
       <Sidebar/>
     </div>
   );
