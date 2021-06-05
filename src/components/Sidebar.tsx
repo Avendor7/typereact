@@ -1,41 +1,18 @@
 import React from 'react';
 import './../styles/Sidebar.css';
+import { Nav } from 'react-bootstrap';
 
 function Sidebar() {
   return (
-    <div className="position-sticky pt-md-5">
-      <ul className="nav flex-column">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">
-            <span className="ml-2">Dashboard</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            <span className="ml-2">Orders</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            <span className="ml-2">Products</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            <span className="ml-2">Customers</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            <span className="ml-2">Reports</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">
-            <span className="ml-2">Integrations</span>
-          </a>
-        </li>
-      </ul>
+    <div className="col-sm-3 col-md-2 position-fixed sidebar">
+      <Nav defaultActiveKey="/home" className="flex-column">
+        <Nav.Link href="/home">Active</Nav.Link>
+        <Nav.Link eventKey="link-1">Link</Nav.Link>
+        <Nav.Link eventKey="link-2">Link</Nav.Link>
+        <Nav.Link eventKey="disabled" disabled>
+          Disabled
+      </Nav.Link>
+      </Nav>
     </div>
 
 
