@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.css';
 import TopNav from './TopNav';
 import Sidebar from './Sidebar';
 import SubNav from './SubNav';
+import NavTabs from './NavTabs';
+
 
 
 function App() {
@@ -13,9 +15,8 @@ function App() {
       <div className="container-fluid">
         <div className="row">
           <Sidebar />
-          <main className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 main">
-            <SubNav />
-            <h1 className="h2">Blah</h1>
+          <main className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 gx-0 main">
+            <NavTabs />
           </main>
         </div>
       </div>
