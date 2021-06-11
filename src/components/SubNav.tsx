@@ -3,7 +3,7 @@ import './../styles/SubNav.scss';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
 function SubNav() {
     return (
-        <Navbar bg="light" variant="light" expand="lg" sticky="top" id="subnav">
+        <Navbar bg="dark" variant="dark" expand="lg" sticky="top" id="subnav">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
