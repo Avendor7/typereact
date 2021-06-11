@@ -13,7 +13,6 @@ function SubNav() {
                     <Nav.Link href="/contact-us">Thursday</Nav.Link>
                     <Nav.Link href="/contact-us">Friday</Nav.Link>
                 </Nav>
-
             </Navbar.Collapse>
         </Navbar>
     );
