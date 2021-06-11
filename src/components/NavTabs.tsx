@@ -3,7 +3,7 @@ import './../styles/NavTabs.scss';
 import { Tabs,Tab,  } from 'react-bootstrap'
 function NavTabs() {
     return (
-        <Tabs defaultActiveKey="profile" id="weekdayTabNav" className="mb-3" nav-fill>
+        <Tabs defaultActiveKey="profile" id="weekdayTabNav" className="mb-3 myTabs" nav-fill>
             <Tab eventKey="monday" title="Monday">
                 <h1>Monday</h1>
             </Tab>

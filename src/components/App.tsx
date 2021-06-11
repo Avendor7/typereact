@@ -11,10 +11,12 @@ import NavTabs from './NavTabs';
 function App() {
   return (
     <div className="App">
-      <TopNav />
+     
       <div className="container-fluid">
         <div className="row">
-          <Sidebar />
+          <div className="col-sm-3 col-md-2 position-fixed sidebar">
+            <Sidebar />
+          </div>
           <main className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 gx-0 main">
             <NavTabs />
           </main>
