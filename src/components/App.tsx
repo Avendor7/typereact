@@ -14,10 +14,10 @@ function App() {
      
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-2col-sm-3 col-md-2 position-fixed sidebar bg-dark">
+          <div className="position-fixed sidebar bg-dark">
             <Sidebar />
           </div>
-          <main className="col-lg-10 offset-sm-2 col-sm-9 offset-sm-3 col-md-10 offset-md-2 gx-0 main">
+          <main className="mainWindow">
             <NavTabs />
           </main>
         </div>

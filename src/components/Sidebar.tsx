@@ -1,5 +1,5 @@
 import React from 'react';
-import './../styles/Sidebar.css';
+import './../styles/Sidebar.scss';
 import { Nav, Navbar } from 'react-bootstrap';
 
 function Sidebar() {
