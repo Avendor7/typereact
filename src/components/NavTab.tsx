@@ -1,10 +1,9 @@
 import React from 'react';
-
+import './../styles/NavTab.scss';
 function NavTab() {
     return (
-        <div>
-            
-        </div>
+        
+        <li><a href="#">Blahday</a></li>
 
     );
 }
