@@ -1,9 +1,12 @@
 import React from 'react';
 import './../styles/NavTab.scss';
 function NavTab() {
+
     return (
-        
-        <li><a href="#">Blahday</a></li>
+        <div className="tab">
+            <div className="tabDay">Monday</div>
+            <a href="#">7</a>
+        </div> 
 
     );
 }

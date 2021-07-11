@@ -1,8 +1,5 @@
-li {
+.tab {
     width: 20%;
-}
-
-li a {
     display: block;
     color: black;
     text-align: center;
@@ -10,7 +7,23 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
+.tab:hover {
     background-color: #CCC;
     color: #000;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    padding: 10px;
+    border-radius: 30%;
+    color: black;
+    background-color: #347deb;
+}
+
+.tabDay {
+    padding-bottom: 10px;
 }

@@ -6,13 +6,11 @@ import NavTab from './NavTab'
 function NavTabs() {
     return (
         <div className="myTabs">
-            <ul>
-                <NavTab />
-                <NavTab />
-                <NavTab />
-                <NavTab />
-                <NavTab />
-            </ul>
+            <NavTab />
+            <NavTab />
+            <NavTab />
+            <NavTab />
+            <NavTab />
         </div>
 
     );
