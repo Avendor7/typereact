@@ -11,6 +11,8 @@ function NavTabs() {
             <NavTab />
             <NavTab />
             <NavTab />
+            <NavTab />
+            <NavTab />
         </div>
 
     );
