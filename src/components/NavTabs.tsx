@@ -5,7 +5,7 @@ import NavTab from './NavTab'
 
 function NavTabs() {
     return (
-        <div className="myTabs bg-light">
+        <div className="myTabs">
             <ul>
                 <NavTab />
                 <NavTab />
