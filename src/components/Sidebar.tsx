@@ -1,6 +1,8 @@
 import React from 'react';
 import './../styles/Sidebar.scss';
 import { Nav, Navbar } from 'react-bootstrap';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 function Sidebar() {
   return (
@@ -8,12 +10,7 @@ function Sidebar() {
       <Navbar.Brand href="#home">DayJourn</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav defaultActiveKey="/home" className="flex-column">
-          <Navbar.Brand href="">Quick Links</Navbar.Brand>
-          <Nav.Link href="/home">This Week</Nav.Link>
-          <Nav.Link href="/home">This Week</Nav.Link>
-          <Nav.Link eventKey="link-1">Last Week</Nav.Link>
-        </Nav>
+        <Calendar/>
       </Navbar.Collapse>
     </Navbar>
   );
