@@ -10,7 +10,9 @@ function Sidebar() {
       <Navbar.Brand href="#home">DayJourn</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Calendar/>
+        <Calendar
+        calendarType = "US"
+        />
       </Navbar.Collapse>
     </Navbar>
   );
