@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {FC} from 'react';
 import './../styles/NavTab.scss';
-function NavTab() {
 
+interface NavTabProps{
+    number ?: String;
+}
+
+
+const NavTab: FC<NavTabProps> = ({number}) => {
     return (
         <div className="tab">
             <div className="tabDay">Monday</div>
-            <a href="#">22</a>
+            <a href="#">{number}</a>
         </div> 
     );
-}
+};
 
 export default NavTab;
