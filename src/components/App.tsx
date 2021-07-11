@@ -5,13 +5,13 @@ import TopNav from './TopNav';
 import Sidebar from './Sidebar';
 import SubNav from './SubNav';
 import NavTabs from './NavTabs';
+import MainWindow from './MainWindow';
 
 
 
 function App() {
   return (
     <div className="App">
-     
       <div className="container-fluid">
         <div className="row">
           <div className="position-fixed sidebar bg-dark">
@@ -19,6 +19,7 @@ function App() {
           </div>
           <main className="mainWindow">
             <NavTabs />
+            <MainWindow />
           </main>
         </div>
       </div>
