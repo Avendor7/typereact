@@ -5,9 +5,8 @@ function NavTab() {
     return (
         <div className="tab">
             <div className="tabDay">Monday</div>
-            <a href="#">7</a>
+            <a href="#">22</a>
         </div> 
-
     );
 }
 
