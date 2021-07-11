@@ -1,13 +1,9 @@
 import React from 'react';
 import './../styles/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import TopNav from './TopNav';
 import Sidebar from './Sidebar';
-import SubNav from './SubNav';
 import NavTabs from './NavTabs';
 import MainWindow from './MainWindow';
-
-
 
 function App() {
   return (
