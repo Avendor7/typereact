@@ -2,7 +2,7 @@ import React from 'react';
 import './../styles/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from './Sidebar';
-import NavTabs from './NavTabs';
+import DayNav from './DayNav';
 import MainWindow from './MainWindow';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
             <Sidebar />
           </div>
           <main className="mainWindow">
-            <NavTabs />
+            <DayNav />
             <MainWindow />
           </main>
         </div>

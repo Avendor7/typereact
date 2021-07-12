@@ -1,9 +1,9 @@
 import React from 'react';
-import './../styles/NavTabs.scss';
+import './../styles/DayNav.scss';
 import { Tabs, Tab, } from 'react-bootstrap';
 import NavTab from './NavTab'
 
-function NavTabs() {
+function DayNav() {
     return (
         <div className="myTabs">
             <NavTab number="23"/>
@@ -18,4 +18,4 @@ function NavTabs() {
     );
 }
 
-export default NavTabs;
+export default DayNav;
