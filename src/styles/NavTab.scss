@@ -3,7 +3,7 @@
     display: block;
     color: black;
     text-align: center;
-    padding: 16px;
+    padding: 10px 10px 10px 10px;
     text-decoration: none;
     font-size: small;
 }
@@ -11,17 +11,17 @@
 .tab a {
     color: black;
     display: block;
-    padding: 10px;
+    padding: 8px;
     font-size: large;
     text-decoration: none;
 }
 
 .tab a:hover {
-    padding: 10px;
+    padding: 8px;
     color: black;
     background-color: #347deb;
 }
 
 .tabDay {
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 }
