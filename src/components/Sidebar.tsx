@@ -3,6 +3,7 @@ import './../styles/Sidebar.scss';
 import { Nav, Navbar } from 'react-bootstrap';
 import Calendar from 'react-calendar';
 import './../styles/Calendar.scss';
+import SidebarLink from './SidebarLink';
 
 function Sidebar() {
   return (
@@ -12,12 +13,13 @@ function Sidebar() {
       <Navbar.Collapse id="basic-navbar-nav">
         <div className="col">
           <div className="row">
-            <h2>Quick Links</h2>
+            <hr></hr>
+            <h3 className="quickLinks">Quick Links</h3>
             <ul>
-              <li><a href="/twoweeksago">Two Weeks Ago</a></li>
-              <li><a href="/lastweek">Last Week</a></li>
-              <li><a href="/thisweek">This Week</a></li>
-              <li><a href="/nextweek">Next Week</a></li>
+              <SidebarLink linktext="Two Weeks Ago" />
+              <SidebarLink linktext="Last Week" />
+              <SidebarLink linktext="This Week" />
+              <SidebarLink linktext="Next Week" />
             </ul>
           </div>
           <div className="row">

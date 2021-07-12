@@ -10,13 +10,14 @@
 
 .tab a {
     color: black;
+    display: block;
+    padding: 10px;
     font-size: large;
     text-decoration: none;
 }
 
 .tab a:hover {
     padding: 10px;
-    border-radius: 30%;
     color: black;
     background-color: #347deb;
 }
