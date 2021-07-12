@@ -10,9 +10,22 @@ function Sidebar() {
       <Navbar.Brand href="#home">DayJourn</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Calendar
-        calendarType = "US"
-        />
+        <div className="col">
+          <div className="row">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="/twoweeksago">Two Weeks Ago</a></li>
+              <li><a href="/lastweek">Last Week</a></li>
+              <li><a href="/thisweek">This Week</a></li>
+              <li><a href="/nextweek">Next Week</a></li>
+            </ul>
+          </div>
+          <div className="row">
+            <Calendar
+              calendarType = "US"
+            />
+          </div>
+        </div>
       </Navbar.Collapse>
     </Navbar>
   );
