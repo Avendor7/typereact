@@ -14,7 +14,7 @@ function Sidebar() {
         <div className="col">
           <div className="row">
             <hr></hr>
-            <h3 className="quickLinks">Quick Links</h3>
+            <h3 className="header">Quick Links</h3>
             <ul>
               <SidebarLink linktext="Two Weeks Ago" />
               <SidebarLink linktext="Last Week" />
@@ -23,9 +23,15 @@ function Sidebar() {
             </ul>
           </div>
           <div className="row">
+            <hr></hr>
+            <h3 className="header">Calendar</h3>
             <Calendar
               calendarType = "US"
             />
+          </div>
+          <div className="row">
+            <hr></hr>
+            <h3 className="header">Tags</h3>
           </div>
         </div>
       </Navbar.Collapse>
