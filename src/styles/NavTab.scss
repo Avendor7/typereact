@@ -14,12 +14,11 @@
     padding: 8px;
     font-size: large;
     text-decoration: none;
-}
-
-.tab a:hover {
-    padding: 8px;
-    color: black;
-    background-color: #347deb;
+    &:hover {
+        padding: 8px;
+        color: black;
+        background-color: #347deb;
+    }
 }
 
 .tabDay {
