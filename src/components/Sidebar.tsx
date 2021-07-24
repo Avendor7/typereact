@@ -5,10 +5,11 @@ import Calendar from 'react-calendar';
 import './../styles/Calendar.scss';
 import SidebarLink from './SidebarLink';
 import logo from './../DayJourn_cropped.png';
+import UserMenu from './UserMenu';
 
 function Sidebar() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className="flex-column">
+    <Navbar bg="dark" variant="dark" expand="lg" className="flex-column sidebar">
       <Navbar.Brand href="#home"><img src={logo} alt="logo"></img></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
@@ -26,8 +27,13 @@ function Sidebar() {
               calendarType = "US"
             />
           </div>
+          <div className="row">
+            <UserMenu />
+          </div>
+         
         </div>
       </Navbar.Collapse>
+      
     </Navbar>
   );
 }

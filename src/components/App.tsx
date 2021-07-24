@@ -5,12 +5,13 @@ import Sidebar from './Sidebar';
 import DayNav from './DayNav';
 import MainWindow from './MainWindow';
 
+
 function App() {
   return (
     <div className="App">
       <div className="container-fluid">
         <div className="row">
-          <div className="position-fixed sidebar bg-dark">
+          <div className="position-fixed bg-dark">
             <Sidebar />
           </div>
           <main className="mainWindow">
