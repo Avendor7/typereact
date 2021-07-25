@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './../styles/Sidebar.scss';
 import { Nav, Navbar } from 'react-bootstrap';
 import Calendar from 'react-calendar';
@@ -8,6 +8,10 @@ import logo from './../DayJourn_cropped.png';
 import UserMenu from './UserMenu';
 
 function Sidebar() {
+
+  const [value, onChange] = useState(new Date());
+
+  
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="flex-column sidebar">
       <Navbar.Brand href="#home"><img src={logo} alt="logo"></img></Navbar.Brand>
@@ -23,14 +27,18 @@ function Sidebar() {
             </ul>
           </div>
           <div className="row">
+            
             <Calendar
               calendarType = "US"
+              onChange = {onChange}
+              value = {value}
             />
+            <h2 className="header">{value.toDateString()}</h2>
           </div>
           <div className="row">
             <UserMenu />
           </div>
-         
+          
         </div>
       </Navbar.Collapse>
       
