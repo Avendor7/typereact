@@ -14,7 +14,7 @@ function Sidebar() {
   
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="flex-column sidebar">
-      <Navbar.Brand href="#home"><img src={logo} alt="logo"></img></Navbar.Brand>
+      <Navbar.Brand href="#home"><h2>Dayjourn</h2></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <div className="col">
@@ -33,15 +33,12 @@ function Sidebar() {
               onChange = {onChange}
               value = {value}
             />
-            <h2 className="header">{value.toDateString()}</h2>
           </div>
           <div className="row">
             <UserMenu />
           </div>
-          
         </div>
       </Navbar.Collapse>
-      
     </Navbar>
   );
 }
