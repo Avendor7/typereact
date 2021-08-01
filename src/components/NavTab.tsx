@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
 import './../styles/NavTab.scss';
 import * as dateFns from 'date-fns';
-
+import {DateSetter} from './SelectedDateContext'
 interface NavTabProps{
     number : Date;
-    onChange(newDate:Date):void 
+    onChange:DateSetter 
 }
 
 

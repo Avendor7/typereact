@@ -1,15 +1,13 @@
 import React, {FC} from 'react';
 import * as dateFns from 'date-fns';
 import './../styles/DayNav.scss';
-import { Tabs, Tab, } from 'react-bootstrap';
 import NavTab from './NavTab'
+import {useSelectedDate} from './SelectedDateContext';
 
-interface DayNavProps{
-    selectedDate: Date,
-    onChange(newDate:Date):void
-}
 
-const DayNav: FC<DayNavProps> = ({selectedDate,onChange}) => {
+const DayNav: FC = () => {
+    
+    const [selectedDate, setDate] = useSelectedDate();
 
 
     let start = dateFns.startOfWeek(selectedDate);
@@ -27,7 +25,7 @@ const DayNav: FC<DayNavProps> = ({selectedDate,onChange}) => {
     return (
         <div className="myTabs">
             {getDaysArray(start,end).map((item) => (
-                <NavTab number={item} onChange={onChange}/>
+                <NavTab number={item} onChange={setDate}/>
             ))}
         </div>
 

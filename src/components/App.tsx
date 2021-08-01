@@ -4,9 +4,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Sidebar from './Sidebar';
 import DayNav from './DayNav';
 import MainWindow from './MainWindow';
+import { SelectedDateProvider } from './SelectedDateContext';
 
-
-const App:FC = () =>{
+const App:FC = () => {
 
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -16,21 +16,23 @@ const App:FC = () =>{
     setSelectedDate(newSelectedDate);
     
   }
-console.log(selectedDate);
+
   return (
-    <div className="App">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="position-fixed bg-dark">
-            <Sidebar selectedDate={selectedDate} onChange={handleChange}/>
+    <SelectedDateProvider>
+      <div className="App">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="position-fixed bg-dark">
+              <Sidebar/>
+            </div>
+            <main className="mainWindow">
+              <DayNav/>
+              <MainWindow />
+            </main>
           </div>
-          <main className="mainWindow">
-            <DayNav selectedDate={selectedDate} onChange={handleChange}/>
-            <MainWindow />
-          </main>
         </div>
       </div>
-    </div>
+    </SelectedDateProvider>
   );
 }
 

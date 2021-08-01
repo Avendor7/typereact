@@ -1,20 +1,17 @@
-import React, {useState, FC} from 'react';
+import React, {useState, FC, useContext} from 'react';
 import './../styles/Sidebar.scss';
 import { Nav, Navbar } from 'react-bootstrap';
 import Calendar from 'react-calendar';
 import './../styles/Calendar.scss';
 import SidebarLink from './SidebarLink';
-import logo from './../DayJourn_cropped.png';
 import UserMenu from './UserMenu';
+import {useSelectedDate} from './SelectedDateContext';
 
-interface SidebarProps {
-  selectedDate: Date,
-  onChange(newDate:Date):void
-}
+const Sidebar:FC = () =>{
 
+  const [selectedDate, setDate] = useSelectedDate();
 
-const Sidebar:FC<SidebarProps> = ({selectedDate, onChange}) =>{
-  
+//const [selectedDate:, onChange] useContext(SelectedDateContext);  
    
   return (
     <Navbar bg="dark" variant="dark" expand="lg" className="flex-column sidebar">
@@ -33,7 +30,7 @@ const Sidebar:FC<SidebarProps> = ({selectedDate, onChange}) =>{
           <div className="row">
             <Calendar
               calendarType = "US"
-              onChange = {onChange}
+              onChange = {setDate}
               value = {selectedDate}
             />
           </div>
