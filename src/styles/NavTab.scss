@@ -22,6 +22,16 @@
     }
 }
 
+.tab .tabButtonActive {
+    color: black;
+    display: block;
+    padding: 8px;
+    font-size: large;
+    text-decoration: none;
+    
+    background-color: #347deb;
+}
+
 .tabDay {
     padding-bottom: 8px;
 }

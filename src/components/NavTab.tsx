@@ -1,20 +1,23 @@
 import React, {FC} from 'react';
 import './../styles/NavTab.scss';
 import * as dateFns from 'date-fns';
-import {DateSetter} from './SelectedDateContext'
+import {DateSetter, useSelectedDate} from './SelectedDateContext'
+
 interface NavTabProps{
     number : Date;
     onChange:DateSetter 
 }
 
-
-
 const NavTab: FC<NavTabProps> = ({number, onChange}) => {
     
+    const [selectedDate, setDate] = useSelectedDate();
+
+    let buttonClassName = dateFns.isEqual(number,selectedDate)  ? "tabButtonActive" : "tabButton";
+
     return (
         <div className="tab">
             <div className="tabDay">{dateFns.format(number,"eeee")}</div>
-            <div className="tabButton" onClick={() => onChange(number)}>{number.getDate()}</div>
+            <div className={buttonClassName} onClick={() => onChange(number)}>{number.getDate()}</div>
         </div> 
     );
 };
