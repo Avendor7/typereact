@@ -18,7 +18,6 @@ const DayNav: FC = () => {
       for(var arr=[],dt=new Date(start); dt<=end; dt.setDate(dt.getDate()+1)){
           arr.push(new Date(dt));
       }
-      console.log(arr);
       return arr;
     };
 
