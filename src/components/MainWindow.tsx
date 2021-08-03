@@ -7,7 +7,12 @@ function MainWindow() {
     const [editorCode, onChange]= useState('');
     
     const options = {
-        selectOnLineNumbers: true
+        selectOnLineNumbers: true,
+        fontSize: 18,
+        padding: {
+            top:20,
+            bottom: 20
+        }
     };
     return (
         <div className="viewbox">
