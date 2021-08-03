@@ -1,8 +1,16 @@
-.viewbox{
+.editor{
     position:fixed;
     top:90px;
-    bottom:0px;
+    bottom:50px;
     height:100%;
     width:100%;
     background-color: darkslategrey;
+}
+.statusbar{
+    bottom:0px;
+    height:50px;
+    position:fixed;
+    width:100%;
+    background-color: darkcyan;
+    color:white;
 }

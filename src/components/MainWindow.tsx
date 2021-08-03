@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './../styles/MainWindow.scss';
 import MonacoEditor from 'react-monaco-editor/lib/editor';
+import BottomStatus from './BottomStatus';
 
 function MainWindow() {
     
@@ -16,15 +17,20 @@ function MainWindow() {
     };
     return (
         <div className="viewbox">
-            <MonacoEditor
-                height="100%"
-                width="100%"
-                language="javascript"
-                theme="vs-dark"
-                value={editorCode}
-                options={options}
-                onChange={onChange}
-            />
+            <div className="editor">
+                <MonacoEditor
+                    height="100%"
+                    width="100%"
+                    language="javascript"
+                    theme="vs-dark"
+                    value={editorCode}
+                    options={options}
+                    onChange={onChange}
+                />
+            </div>
+            <div className="statusbar">
+                <BottomStatus />
+            </div>
         </div>
     );
 }
