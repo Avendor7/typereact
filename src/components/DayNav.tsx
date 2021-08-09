@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 import * as dateFns from 'date-fns';
 import './../styles/DayNav.scss';
-import NavTab from './NavTab'
+import NavTab from './NavTab';
+import MenuArrow from './MenuArrow';
 import {useSelectedDate} from './SelectedDateContext';
 
 
@@ -23,9 +24,11 @@ const DayNav: FC = () => {
 
     return (
         <div className="myTabs">
+            <MenuArrow direction="left"/>
             {getDaysArray(start,end).map((item) => (
                 <NavTab number={item} onChange={setDate}/>
             ))}
+            <MenuArrow direction="right"/>
         </div>
 
     );
