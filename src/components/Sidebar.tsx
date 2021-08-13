@@ -20,14 +20,6 @@ const Sidebar:FC = () =>{
       <Navbar.Collapse id="basic-navbar-nav">
         <div className="col">
           <div className="row">
-            <ul>
-              <SidebarLink linktext="Two Weeks Ago" />
-              <SidebarLink linktext="Last Week" />
-              <SidebarLink linktext="This Week" />
-              <SidebarLink linktext="Next Week" />
-            </ul>
-          </div>
-          <div className="row">
             <Calendar
               calendarType = "US"
               onChange = {setDate}
