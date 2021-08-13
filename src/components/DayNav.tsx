@@ -24,11 +24,11 @@ const DayNav: FC = () => {
 
     return (
         <div className="myTabs">
-            <MenuArrow direction="left"/>
+            <MenuArrow direction="left" onChange={setDate}/>
             {getDaysArray(start,end).map((item) => (
                 <NavTab number={item} onChange={setDate}/>
             ))}
-            <MenuArrow direction="right"/>
+            <MenuArrow direction="right" onChange={setDate}/>
         </div>
 
     );
