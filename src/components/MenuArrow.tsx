@@ -15,20 +15,16 @@ const MenuArrow: FC<MenuArrowProps> = ({direction, onChange}) => {
     const getNextWeekDate = dateFns.addDays(selectedDate, 7);
 
     let dateFunction = new Date;
-    let arrowSymbol = "";
     if (direction == "left"){
         dateFunction = dateFns.subDays(selectedDate, 7);
-        arrowSymbol = "&#5176;";
     }else{
         dateFunction = dateFns.addDays(selectedDate, 7);
-        arrowSymbol = "&#5171;";
-        
     }
 
     return (
         <div className="menuArrow">
             <span>Arrow {direction}</span>
-            <div className="tab" onClick={() => setDate(dateFunction)}><h2><pre>{arrowSymbol}</pre></h2></div>
+            <div className="tab" onClick={() => setDate(dateFunction)}><h2>{direction}</h2></div>
         </div>
     );
 }
