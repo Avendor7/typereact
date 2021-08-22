@@ -2,6 +2,8 @@ import React, {FC} from 'react';
 import './../styles/MenuArrow.scss';
 import * as dateFns from 'date-fns';
 import {DateSetter, useSelectedDate} from './SelectedDateContext'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 interface MenuArrowProps{
     direction : string
@@ -23,8 +25,7 @@ const MenuArrow: FC<MenuArrowProps> = ({direction, onChange}) => {
 
     return (
         <div className="menuArrow">
-            <span>Arrow {direction}</span>
-            <div className="tab" onClick={() => setDate(dateFunction)}><h2>{direction}</h2></div>
+            <div className="tab" onClick={() => setDate(dateFunction)}><h2><FontAwesomeIcon icon={faChevronLeft} size="lg" /><FontAwesomeIcon icon={faChevronRight} size="lg" /></h2></div>
         </div>
     );
 }
