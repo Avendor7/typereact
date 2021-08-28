@@ -1,11 +1,11 @@
 .arrowTab{
-    color: #444;
+    padding:10px;
+    color: black;
     display: flex;
     align-items: center;
     height: 100%;
     &:hover {
-        
-        color: black;
+        color: #444;
         cursor: pointer;
     }
 }
