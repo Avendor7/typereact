@@ -1,9 +1,6 @@
 .editor{
     position:fixed;
-    top:90px;
-    bottom:50px;
-    height:100%;
-    width:100%;
+
     background-color: darkslategrey;
 }
 .statusbar{
@@ -13,4 +10,18 @@
     width:100%;
     background-color: darkcyan;
     color:white;
+}
+.nav{
+    background-color: #1e1e1e;
+
+}
+.nav-tabs{
+    background-color: #1e1e1e;
+}
+.nav-item{
+    background-color: #1e1e1e;
+    .active{
+        background-color: #1e1e1e !important;
+
+    }
 }
