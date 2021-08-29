@@ -1,6 +1,6 @@
 import React, {useState, FC} from 'react';
-import './../styles/App.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import './../styles/App.css';
 import Sidebar from './Sidebar';
 import DayNav from './DayNav';
 import MainWindow from './MainWindow';

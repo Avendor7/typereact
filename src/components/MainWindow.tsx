@@ -22,7 +22,7 @@ function MainWindow() {
         <div className="viewbox">
             <div>
                 <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
-                    <Tab eventKey="home" title="Home">
+                    <Tab eventKey="home" title="Home" className="bg-dark">
                         <div className="editor">
                             <MonacoEditor
                                 height="100%"

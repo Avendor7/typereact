@@ -1,6 +1,7 @@
 .editor{
     position:fixed;
-
+    height:100%;
+    width:100%;
     background-color: darkslategrey;
 }
 .statusbar{
@@ -13,7 +14,16 @@
 }
 .nav{
     background-color: #1e1e1e;
-
+    border-color:#ccc;
+}
+.nav-link{
+    color:#fff;
+    border: 1px solid;
+    border-color:#ccc;
+    border-width: 2px;
+    &:hover{
+        background-color:#4e4e4e;
+    }
 }
 .nav-tabs{
     background-color: #1e1e1e;
@@ -24,4 +34,7 @@
         background-color: #1e1e1e !important;
 
     }
+}
+.mb-3{
+    margin-bottom:0rem !important;
 }
