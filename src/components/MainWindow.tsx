@@ -21,8 +21,8 @@ function MainWindow() {
     return (
         <div className="viewbox">
             <div>
-                <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
-                    <Tab eventKey="home" title="Home" className="bg-dark">
+                <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 darktabs">
+                    <Tab eventKey="home" title="Home" className="bg-dark darktab">
                         <div className="editor">
                             <MonacoEditor
                                 height="100%"

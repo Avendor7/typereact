@@ -23,16 +23,32 @@
     border-width: 2px;
     &:hover{
         background-color:#4e4e4e;
+        color:#fff;
+    }
+    &:active{
+        color:white;
     }
 }
-.nav-tabs{
+.darktabs{
     background-color: #1e1e1e;
 }
+
+.nav-tab{
+    color:white;
+    border: 1px solid;
+    border-color: #1e1e1e;
+    border-radius: 10%;
+}
 .nav-item{
-    background-color: #1e1e1e;
+    background-color: #3e3e3e;
+    border: 1px solid;
+    border-color: #1e1e1e;
+    border-radius: 10%;
+    color:white;
     .active{
         background-color: #1e1e1e !important;
-
+        
+        color:white;
     }
 }
 .mb-3{
