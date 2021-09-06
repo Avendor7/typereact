@@ -10,6 +10,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
+import {Paper} from '@mui/material';
 import {lightTheme, darkTheme} from './theme';
 const App:FC = () => {
 
@@ -25,7 +26,7 @@ const App:FC = () => {
   return (
     <ThemeProvider theme={darkTheme}>
       <SelectedDateProvider>
-        <div className="App">
+        <Paper elevation={0} className="App">
           <div className="container-fluid">
             <div className="row">
               <div className="position-fixed bg-dark">
@@ -37,7 +38,7 @@ const App:FC = () => {
               </main>
             </div>
           </div>
-        </div>
+        </Paper>
       </SelectedDateProvider>
     </ThemeProvider>
   );
