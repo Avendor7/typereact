@@ -9,6 +9,8 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
+import {lightTheme, darkTheme} from './theme';
 const App:FC = () => {
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -21,21 +23,23 @@ const App:FC = () => {
   }
 
   return (
-    <SelectedDateProvider>
-      <div className="App">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="position-fixed bg-dark">
-              <Sidebar/>
+    <ThemeProvider theme={darkTheme}>
+      <SelectedDateProvider>
+        <div className="App">
+          <div className="container-fluid">
+            <div className="row">
+              <div className="position-fixed bg-dark">
+                <Sidebar/>
+              </div>
+              <main className="mainWindow">
+                <DayNav/>
+                <MainWindow />
+              </main>
             </div>
-            <main className="mainWindow">
-              <DayNav/>
-              <MainWindow />
-            </main>
           </div>
         </div>
-      </div>
-    </SelectedDateProvider>
+      </SelectedDateProvider>
+    </ThemeProvider>
   );
 }
 

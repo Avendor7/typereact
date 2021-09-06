@@ -5,7 +5,6 @@ import BottomStatus from './BottomStatus';
 
 import {Tabs, Tab, Box, Typography} from '@mui/material';
 import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
-import { orange } from '@mui/material/co';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -63,37 +62,35 @@ interface TabPanelProps {
   
     return (
     <div className="viewbox">
-        <ThemeProvider theme={dark}>
-             <Box sx={{ width: '100%' }}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                    <Tab label="Item One" {...a11yProps(0)} />
-                    <Tab label="Item Two" {...a11yProps(1)} />
-                    <Tab label="Item Three" {...a11yProps(2)} />
-                </Tabs>
-                </Box>
-                <TabPanel value={value} index={0}>
-                    <div className="editor">
-                        <MonacoEditor
-                            height="100%"
-                            width="100%"
-                            language="javascript"
-                            theme="vs-dark"
-
-                            value={editorCode}
-                            options={options}
-                            onChange={onChange}
-                        />
-                    </div>
-                </TabPanel>
-                <TabPanel value={value} index={1}>
-                Item Two
-                </TabPanel>
-                <TabPanel value={value} index={2}>
-                Item Three
-                </TabPanel>
+        <Box sx={{ width: '100%' }}>
+            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+                <Tab label="Item One" {...a11yProps(0)} />
+                <Tab label="Item Two" {...a11yProps(1)} />
+                <Tab label="Item Three" {...a11yProps(2)} />
+            </Tabs>
             </Box>
-        </ThemeProvider>
+            <TabPanel value={value} index={0}>
+                <div className="editor">
+                    <MonacoEditor
+                        height="100%"
+                        width="100%"
+                        language="javascript"
+                        theme="vs-dark"
+
+                        value={editorCode}
+                        options={options}
+                        onChange={onChange}
+                    />
+                </div>
+            </TabPanel>
+            <TabPanel value={value} index={1}>
+            Item Two
+            </TabPanel>
+            <TabPanel value={value} index={2}>
+            Item Three
+            </TabPanel>
+        </Box>
       </div>
     );
   }
