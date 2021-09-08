@@ -3,8 +3,9 @@ import './../styles/MainWindow.scss';
 import MonacoEditor from 'react-monaco-editor/lib/editor';
 import BottomStatus from './BottomStatus';
 
-import {Tabs, Tab, Box, Typography} from '@mui/material';
-import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
+import {Tabs, Tab, Box, Typography, IconButton} from '@mui/material';
+import {TabList, TabContext} from '@mui/lab';
+import AddIcon from '@mui/icons-material/Add';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -55,7 +56,7 @@ interface TabPanelProps {
 
 
     const [value, setValue] = React.useState(0);
-  
+    
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       setValue(newValue);
     };
@@ -63,14 +64,18 @@ interface TabPanelProps {
     return (
     <div className="viewbox">
         <Box sx={{ width: '100%' }}>
+          <TabContext value={value.toString()}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-            <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-                <Tab label="Item One" {...a11yProps(0)} />
-                <Tab label="Item Two" {...a11yProps(1)} />
-                <Tab label="Item Three" {...a11yProps(2)} />
-            </Tabs>
+              <TabList value={value} onChange={handleChange} aria-label="basic tabs example">
+                  <Tab label="Item One" {...a11yProps(0)} />
+                  <Tab label="Item Two" {...a11yProps(1)} />
+                  <Tab label="Item Three" {...a11yProps(2)} />
+                  <IconButton aria-label="add">
+                    <AddIcon />
+                  </IconButton>
+              </TabList>   
             </Box>
-            <TabPanel value={value} index={0}>
+            <TabPanel value={value} index={value}>
                 <div className="editor">
                     <MonacoEditor
                         height="100%"
@@ -78,18 +83,13 @@ interface TabPanelProps {
                         language="javascript"
                         theme="vs-dark"
 
-                        value={editorCode}
+                        value={value.toString()}
                         options={options}
                         onChange={onChange}
                     />
                 </div>
             </TabPanel>
-            <TabPanel value={value} index={1}>
-            Item Two
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-            Item Three
-            </TabPanel>
+          </TabContext>
         </Box>
       </div>
     );
