@@ -20,3 +20,8 @@ TODO
 2. modify the theme as necessary
 3. can probably use the same index on the tabs but change the content within the tab. 
     Add more indexes means add more pages
+
+
+https://github.com/Raja0sama/browser-tabs
+
+Chrome style browser tabs. 
