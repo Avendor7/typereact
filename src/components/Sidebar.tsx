@@ -7,9 +7,13 @@ import SidebarLink from './SidebarLink';
 import UserMenu from './UserMenu';
 import {useSelectedDate} from './SelectedDateContext';
 
+import StaticDatePicker from '@mui/lab/StaticDatePicker';
+import TextField from '@mui/material/TextField';
+
 const Sidebar:FC = () =>{
 
   const [selectedDate, setDate] = useSelectedDate();
+  const [value, setValue] = React.useState<Date | null>(new Date());
 
 //const [selectedDate:, onChange] useContext(SelectedDateContext);  
    
@@ -24,6 +28,17 @@ const Sidebar:FC = () =>{
               calendarType = "US"
               onChange = {setDate}
               value = {selectedDate}
+            />
+          </div>
+          <div className="row">
+            <StaticDatePicker
+              displayStaticWrapperAs="desktop"
+              openTo="day"
+              value={value}
+              onChange={(newValue) => {
+                setValue(newValue);
+              }}
+              renderInput={(params) => <TextField {...params} />}
             />
           </div>
           <div className="row">
