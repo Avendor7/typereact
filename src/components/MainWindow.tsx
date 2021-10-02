@@ -82,7 +82,6 @@ interface TabPanelProps {
                         width="100%"
                         language="javascript"
                         theme="vs-dark"
-
                         value={value.toString()}
                         options={options}
                         onChange={onChange}

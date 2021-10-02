@@ -24,20 +24,11 @@ const Sidebar:FC = () =>{
       <Navbar.Collapse id="basic-navbar-nav">
         <div className="col">
           <div className="row">
-            <Calendar
-              calendarType = "US"
-              onChange = {setDate}
-              value = {selectedDate}
-            />
-          </div>
-          <div className="row">
             <StaticDatePicker
               displayStaticWrapperAs="desktop"
               openTo="day"
-              value={value}
-              onChange={(newValue) => {
-                setValue(newValue);
-              }}
+              value={selectedDate}
+              onChange={(date) => setDate(date || new Date())}
               renderInput={(params) => <TextField {...params} />}
             />
           </div>

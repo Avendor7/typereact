@@ -31,7 +31,7 @@ const App:FC = () => {
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <ThemeProvider theme={darkTheme}>
         <SelectedDateProvider>
-          <Paper elevation={0} className="App">
+          <Paper elevation={0} square className="App">
             <div className="container-fluid">
               <div className="row">
                 <div className="position-fixed bg-dark">
