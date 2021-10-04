@@ -30,10 +30,10 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+import SettingsIcon from '@mui/icons-material/Settings';
 import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
-import {Paper} from '@mui/material';
+import {Button, Paper} from '@mui/material';
 import {lightTheme, darkTheme} from './theme';
-
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
@@ -131,7 +131,7 @@ const App:FC = () => {
             <CssBaseline />
             <AppBar position="fixed">
               <Toolbar>
-                <Typography variant="h6" noWrap component="div">
+                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                   DayJourn
                 </Typography>
                 <DatePicker
@@ -140,6 +140,10 @@ const App:FC = () => {
                   onChange={(date) => setDate(date || new Date())}
                   renderInput={(params) => <TextField {...params} />}
                 />
+                <Box sx={{ flexGrow: 1 }}/>
+                <IconButton aria-label="delete">
+                  <SettingsIcon />
+                </IconButton>
               </Toolbar>
             </AppBar>
             <Box component="main" sx={{ flexGrow: 1 }}>
