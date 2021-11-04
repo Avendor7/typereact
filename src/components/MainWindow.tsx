@@ -20,32 +20,19 @@ function MainWindow() {
     };
     return (
         <div className="viewbox">
-            <div>
-                <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 darktabs">
-                    <Tab eventKey="home" title="Home" className="bg-dark darktab">
-                        <div className="editor">
-                            <MonacoEditor
-                                height="100%"
-                                width="100%"
-                                language="javascript"
-                                theme="vs-dark"
+          
+            <div className="editor">
+                <MonacoEditor
+                    height="100%"
+                    width="100%"
+                    language="javascript"
+                    theme="vs-dark"
 
-                                value={editorCode}
-                                options={options}
-                                onChange={onChange}
-                            />
-                        </div>
-                    </Tab>
-                    <Tab eventKey="profile" title="Profile">
-                        <h2>Hello World2</h2>
-                    </Tab>
-                    <Tab eventKey="contact" title="Contact" >
-                        <h2>Hello World3</h2>
-                    </Tab>
-                </Tabs>
+                    value={editorCode}
+                    options={options}
+                    onChange={onChange}
+                />
             </div>
-
-
             <div className="statusbar">
                 <BottomStatus />
             </div>
