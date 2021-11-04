@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-
+import {DateSetter, useSelectedDate} from './components/SelectedDateContext'
+const [selectedDate, setDate] = useSelectedDate();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App onChange={setDate}/>
   </React.StrictMode>,
   document.getElementById('root')
 );
