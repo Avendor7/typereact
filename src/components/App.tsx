@@ -3,12 +3,9 @@ import { useTheme, Theme, CSSObject } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import CssBaseline from '@mui/material/CssBaseline';
-import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
-import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -17,20 +14,18 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
-import DatePicker from '@mui/lab/DatePicker';
-import TextField from '@mui/material/TextField';
 import {useSelectedDate} from './SelectedDateContext';
 
 import './../styles/App.css';
 import Sidebar from './Sidebar';
 import DayNav from './DayNav';
 import MainWindow from './MainWindow';
+import NavBar from './NavBar';
 import { SelectedDateProvider } from './SelectedDateContext';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
-import SettingsIcon from '@mui/icons-material/Settings';
 import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
 import {Button, Paper} from '@mui/material';
 import {lightTheme, darkTheme} from './theme';
@@ -130,21 +125,7 @@ const App:FC = () => {
           <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar position="fixed">
-              <Toolbar>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-                  DayJourn
-                </Typography>
-                <DatePicker
-                  openTo="day"
-                  value={selectedDate}
-                  onChange={(date) => setDate(date || new Date())}
-                  renderInput={(params) => <TextField {...params} />}
-                />
-                <Box sx={{ flexGrow: 1 }}/>
-                <IconButton aria-label="delete">
-                  <SettingsIcon />
-                </IconButton>
-              </Toolbar>
+              <NavBar />
             </AppBar>
             <Box component="main" sx={{ flexGrow: 1 }}>
               <DrawerHeader />
