@@ -16,6 +16,7 @@ export const SelectedDateContext = createContext<SelectedDateInterface>({
 //helper that uses the context so I don't need to call this in every single place I want to use the date
 export const useSelectedDate = ():[Date,DateSetter] =>{
     const {selectedDate,setDate} = useContext(SelectedDateContext);
+    console.log(selectedDate);
     return [selectedDate, setDate];
 }
 

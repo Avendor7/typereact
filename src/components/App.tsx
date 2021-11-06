@@ -15,7 +15,6 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import {useSelectedDate} from './SelectedDateContext';
-
 import './../styles/App.css';
 import Sidebar from './Sidebar';
 import DayNav from './DayNav';
@@ -68,6 +67,10 @@ interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
 }
 
+interface NavTabProps{
+  onChange:DateSetter 
+}
+
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== 'open',
 })<AppBarProps>(({ theme, open }) => ({
@@ -103,7 +106,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-const App:FC = () => {
+const App:FC<NavTabProps> = ({onChange}) => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
