@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {FC,useState} from 'react';
 //import './../styles/NavBar.scss';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -8,13 +8,18 @@ import Box from '@mui/material/Box';
 import SettingsIcon from '@mui/icons-material/Settings';
 import TextField from '@mui/material/TextField';
 import {useSelectedDate} from './SelectedDateContext';
-import { SelectedDateProvider } from './SelectedDateContext';
+import {DateSetter, SelectedDateProvider } from './SelectedDateContext';
 
-function NavBar() {
+
+interface NavBarProps{
+    onChange:DateSetter 
+  }
+
+const NavBar: FC<NavBarProps> = ({onChange}) => {
+  
     
   const [selectedDate, setDate] = useSelectedDate();
 
-    
     return (
         <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>

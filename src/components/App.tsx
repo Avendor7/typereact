@@ -21,7 +21,7 @@ import Sidebar from './Sidebar';
 import DayNav from './DayNav';
 import MainWindow from './MainWindow';
 import NavBar from './NavBar';
-import { SelectedDateProvider } from './SelectedDateContext';
+import {DateSetter, SelectedDateProvider } from './SelectedDateContext';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
@@ -125,7 +125,7 @@ const App:FC = () => {
           <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar position="fixed">
-              <NavBar />
+              <NavBar onChange={setDate}/>
             </AppBar>
             <Box component="main" sx={{ flexGrow: 1 }}>
               <DrawerHeader />
