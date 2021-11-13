@@ -7,32 +7,6 @@ import {Tabs, Tab, Box, Typography, IconButton} from '@mui/material';
 import {TabList, TabContext} from '@mui/lab';
 import AddIcon from '@mui/icons-material/Add';
 
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-  }
-  
-  function TabPanel(props: TabPanelProps) {
-    const { children, value, index, ...other } = props;
-  
-    return (
-      <div
-        role="tabpanel"
-        hidden={value !== index}
-        id={`simple-tabpanel-${index}`}
-        aria-labelledby={`simple-tab-${index}`}
-        {...other}
-      >
-        {value === index && (
-          <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
-          </Box>
-        )}
-      </div>
-    );
-  }
-  
   function a11yProps(index: number) {
     return {
       id: `simple-tab-${index}`,
@@ -42,7 +16,7 @@ interface TabPanelProps {
   
   export default function MainWindow() {
 
-    const [editorCode, onChange]= useState('');
+    //const [editorCode, onChange]= useState('');
     
     const options = {
 
@@ -71,9 +45,9 @@ interface TabPanelProps {
                         width="100%"
                         language="javascript"
                         theme="vs-dark"
-                        value={value.toString()}
+                        value={''}
                         options={options}
-                        onChange={onChange}
+                        
                     />
                 </div>
         </Box>
