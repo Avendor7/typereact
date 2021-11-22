@@ -25,3 +25,6 @@ TODO
 https://github.com/Raja0sama/browser-tabs
 
 Chrome style browser tabs. 
+
+Rails db stuff
+https://www.youtube.com/watch?v=V1xIa6JemeI
