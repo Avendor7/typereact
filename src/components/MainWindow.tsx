@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 import './../styles/MainWindow.scss';
 import MonacoEditor from 'react-monaco-editor/lib/editor';
 import BottomStatus from './BottomStatus';
@@ -28,13 +29,18 @@ import AddIcon from '@mui/icons-material/Add';
         }
     };
 
-
-    const [value, setValue] = React.useState(0);
+    const [value, setValue] = React.useState('');
     
-    const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
       setValue(newValue);
     };
-  
+
+    React.useEffect(() => {
+      axios.get('http://localhost:3000/users').then((response) => {
+        setValue(response.data[0].days[0].content);
+      });
+    }, []);
+
     return (
     <div className="viewbox">
         <Box sx={{ width: '100%' }}>
@@ -45,7 +51,7 @@ import AddIcon from '@mui/icons-material/Add';
                         width="100%"
                         language="javascript"
                         theme="vs-dark"
-                        value={''}
+                        value={value}
                         options={options}
                         
                     />
