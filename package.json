@@ -20,6 +20,7 @@
     "@types/react": "^17.0.0",
     "@types/react-calendar": "^3.4.1",
     "@types/react-dom": "^17.0.0",
+    "axios": "^0.24.0",
     "bootstrap": "^5.0.1",
     "date-fns": "^2.23.0",
     "monaco-editor-webpack-plugin": "^4.1.1",
@@ -35,10 +36,9 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "PORT=3001 react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "test": "react-app-rewired test"
   },
   "eslintConfig": {
     "extends": [
